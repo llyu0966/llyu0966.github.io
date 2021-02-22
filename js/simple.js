@@ -30,7 +30,7 @@ ctx.fillStyle = "#FF0000";
 ctx.font="20px Veranda";
 ctx.fillText("Sun",460,80);
 
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "#D3D3D3";
 ctx.fillRect(112.5,230,175,70);
 
 // Draw triangle
@@ -64,6 +64,7 @@ ctx.fill();
 ctx.closePath();
 
 //Text on the Right
+ctx.fillStyle = "#FF0000";
 ctx.font="20px Veranda";
 ctx.fillText("Hello",230,260);
 ctx.font="10px Veranda";
