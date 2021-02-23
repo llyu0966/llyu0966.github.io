@@ -1,4 +1,4 @@
-const canvas = document.getElementById('myCanvas');
+var canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 
 function init()
