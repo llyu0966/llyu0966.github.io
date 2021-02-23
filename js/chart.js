@@ -1,6 +1,6 @@
-var canvas = document.getElementById("ChartCanvas");
+const canvas = document.getElementById("ChartCanvas");
         
-var ctx = canvas.getContext("2d");
+let ctx = canvas.getContext("2d");
 
         
 var fruit = [
