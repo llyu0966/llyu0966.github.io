@@ -1,6 +1,6 @@
-var canvas = document.getElementById("ChartCanvas");
+var c = document.getElementById("ChartCanvas");
         
-let ctx = canvas.getContext("2d");
+let ctc = c.getContext("2d");
 
         
 var fruit = [
@@ -14,21 +14,21 @@ var fruit = [
         
 for(i = 0; i < 6; i++)
 {
-   ctx.save();
-   ctx.fillStyle = fruit[i].color;
-   ctx.fillRect(100*i, 600-30*fruit[i].quantity, 100, 30*fruit[i].quantity);
-   ctx.restore();
-   ctx.save();
-   ctx.fillStyle = "#FFF8DC";
-   ctx.font = "20px Georgia";
-   ctx.fillText(fruit[i].name, 100*i+10, 550);
-   ctx.fillText(fruit[i].quantity, 100*i+10, 580);
-   ctx.restore();
+   ctc.save();
+   ctc.fillStyle = fruit[i].color;
+   ctc.fillRect(100*i, 600-30*fruit[i].quantity, 100, 30*fruit[i].quantity);
+   ctc.restore();
+   ctc.save();
+   ctc.fillStyle = "#FFF8DC";
+   ctc.font = "20px Georgia";
+   ctc.fillText(fruit[i].name, 100*i+10, 550);
+   ctc.fillText(fruit[i].quantity, 100*i+10, 580);
+   ctc.restore();
  }
 
-ctx.save();
-ctx.font = "20px Verdana";
-ctx.fillText("A Bar Chart by", 300, 100);
-ctx.font = "italic 20px Verdana";
-ctx.fillText("Liyu Lin", 455, 100);
-ctx.restore();
+ctc.save();
+ctc.font = "20px Verdana";
+ctc.fillText("A Bar Chart by", 300, 100);
+ctc.font = "italic 20px Verdana";
+ctc.fillText("Liyu Lin", 455, 100);
+ctc.restore();
