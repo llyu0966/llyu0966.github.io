@@ -1,4 +1,4 @@
-const canvas = document.getElementById("ChartCanvas");
+var canvas = document.getElementById("ChartCanvas");
         
 let ctx = canvas.getContext("2d");
 
