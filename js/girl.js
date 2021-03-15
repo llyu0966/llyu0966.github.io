@@ -1,31 +1,31 @@
 var canvas = document.querySelector('canvas');
-var c = canvas.getContext('2d');
+var cx = canvas.getContext('2d');
 
-function drawBubble(c, x, y, w, h, radius)
+function drawBubble(cx, x, y, w, h, radius)
 {
   var r = x + w;
   var b = y + h;
-  c.beginPath();
-  c.strokeStyle="black";
-  c.lineWidth="2";
-  c.moveTo(x+radius, y);
-  c.lineTo(x+radius/2, y-10);
-  c.lineTo(x+radius * 2, y);
-  c.lineTo(r-radius, y);
-  c.quadraticCurveTo(r, y, r, y+radius);
-  c.lineTo(r, y+h-radius);
-  c.quadraticCurveTo(r, b, r-radius, b);
-  c.lineTo(x+radius, b);
-  c.quadraticCurveTo(x, b, x, b-radius);
-  c.lineTo(x, y+radius);
-  c.quadraticCurveTo(x, y, x+radius, y);
-  c.stroke();
+  cx.beginPath();
+  cx.strokeStyle="black";
+  cx.lineWidth="2";
+  cx.moveTo(x+radius, y);
+  cx.lineTo(x+radius/2, y-10);
+  cx.lineTo(x+radius * 2, y);
+  cx.lineTo(r-radius, y);
+  cx.quadraticCurveTo(r, y, r, y+radius);
+  cx.lineTo(r, y+h-radius);
+  cx.quadraticCurveTo(r, b, r-radius, b);
+  cx.lineTo(x+radius, b);
+  cx.quadraticCurveTo(x, b, x, b-radius);
+  cx.lineTo(x, y+radius);
+  cx.quadraticCurveTo(x, y, x+radius, y);
+  cx.stroke();
 }
 
-function textInfo(c, text1, w, h)
+function textInfo(cx, text1, w, h)
 {
-    c.font = "15px Arial";
-    c.fillText(text1, w, h);
+    cx.font = "15px Arial";
+    cx.fillText(text1, w, h);
 }
 
 //create empty array
@@ -38,10 +38,10 @@ text[4] = "to give me a hug. "
 
 var j = 1;
 setInterval(function(){ 
-    c.clearRect(300, 130, 240, 120); 
-    drawBubble(c, 300,150,220, 90, 20);
-    textInfo(c, text[j], 310, 180);
-    textInfo(c, text[j+1], 310, 200);
+    cx.clearRect(300, 130, 240, 120); 
+    drawBubble(cx, 300,150,220, 90, 20);
+    textInfo(cx, text[j], 310, 180);
+    textInfo(cx, text[j+1], 310, 200);
     
     j=j+2;
     if( j >= 4){
@@ -69,6 +69,6 @@ setInterval(function(){
     if( i >= 48){
         i = 1;
     }
-    c.clearRect(100,100,200,200);
-    c.drawImage(images[i],100,100,200,200);
+    cx.clearRect(100,100,200,200);
+    cx.drawImage(images[i],100,100,200,200);
 }, 100)
