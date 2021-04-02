@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Notebook</title>
+  </head>
+  <body>
+    <div class="alert"></div>
+    <form id="save-later-form">
+      <h3>Simple Notebook</h3>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" maxlength="40"/>
+      <label for="description">Description</label>
+      <textarea
+        rows="10"
+        cols="80"
+        style="resize:none;"
+        name="description"
+        id="description"
+        placeholder="Write some text here"
+      ></textarea>
+      <button type="submit" id="save">SAVE</button>
+      <button type="submit" id="submit" onclick="deleteItems()">CLEAR</button>
+    </form>
+  </body>
+  <script src="form.js"></script>
+  <script>
+  function deleteItems() 
+  {
+    localStorage.clear();
+  }
+  </script>
+</html>
+
