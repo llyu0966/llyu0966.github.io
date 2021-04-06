@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Project</title>
+    <style> canvas { background-color: white;}</style>
+    <!-- Include Chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+    .button {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        overflow: hidden;
+        display: inline-block;
+        padding: 4rem 4rem 4rem 3.8rem;
+        color: #FFF;
+        background: none;
+        border: 1px solid #FFF;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <h1>Horizontal Bar Chart</h1>
+    <div style="width:50%">
+    <canvas id="bar-chart" width="1" height="1"></canvas>
+    </div> 
+    <h1>Doughnut Chart</h1>
+    <div style="width:50%">
+    <canvas id="doughnut-chart" width="1" height="1"></canvas>
+    </div> 
+    <button style="width:50%" class="button"><a href="https://llyu0966.github.io/">Back to the main page.</a></button>
+    <script>
+        // Bar chart
+        new Chart(document.getElementById("bar-chart"), {
+            type: 'horizontalBar',
+            data: {
+            labels: ["Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"],
+            datasets: [
+                    {
+                    label: "NUM_PEOP_TEST",
+                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                    data: [409786,880344,594447,823307,147456]
+                    }
+                  ]
+                },
+            options: {
+                legend: { display: true },
+                title: {
+                        display: true,
+                        position: 'top',
+                        text: ["DOHMH COVID-19 Antibody-by-Borough in New York City",
+                              ' created by Liyu Lin']
+                        }
+                    }
+        });
+        // Doughnut chart
+        new Chart(document.getElementById("doughnut-chart"), {
+            type: 'doughnut',
+            data: {
+            labels: ["Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"],
+            datasets: [
+                    {
+                    label: "NUM_PEOP_TEST",
+                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                    data: [409786,880344,594447,823307,147456]
+                    }
+                  ]
+                },
+            options: {
+                legend: { display: true },
+                title: {
+                        display: true,
+                        text: ['DOHMH COVID-19 Antibody-by-Borough in New York City',' created by Liyu Lin']
+                        }
+                    }
+        });
+
+
+        </script>
+    
+</body>
+</html>
