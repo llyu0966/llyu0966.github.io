@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Voice" />
+        <meta name="author" content="Liyu Lin" />
+        <title>&#128075 Voice Recognition Project</title>
+        <style>
+            body {
+                background: #555;
+            }
+            
+            h1 {text-align: center;}
+
+            .content {
+                max-width: 800px;
+                margin: auto;
+                background: white;
+                padding: 10px;
+            }
+
+            table {
+                    border-spacing: 0.5rem;
+                }
+            td {
+                    padding: 0.5rem;
+                }
+
+            td:nth-child(1) { background: hsl(150, 50%, 50%); }
+            td:nth-child(2) { background: hsl(160, 60%, 50%); }
+            td:nth-child(3) { background: hsl(170, 70%, 50%); }
+            td:nth-child(4) { background: hsl(180, 80%, 50%); }
+            td:nth-child(5) { background: hsl(190, 90%, 50%); }
+            td:nth-child(6) { background: hsl(200, 99%, 50%); }
+
+            .button {
+            text-align: center;
+            margin-top:1.5em;
+            margin-bottom: auto;
+            padding-bottom: 1.0em;
+            justify-content: center;
+            }
+            a {
+            background-color: black;
+            color: white;
+            padding: 1em 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+            }
+
+            a:hover {
+            background-color: #FF00FF;;
+            }
+
+            a:active {
+            background-color: black;
+            }
+
+            a:visited {
+            background-color: black;
+            }
+        </style>
+        <script src="voiceRecognition.js"></script>
+    </head>
+    <body>
+        <div class="content">
+        <h1>&#128075 Voice Recognition Project</h1>
+        <h2>Instructions</h2>
+        <ul>
+            <li>Say the name of the object on the screen to display the object</li>
+            <li>Say "Help" to listen to the instructions</li>
+            <li>Say "About" to hear the student's name and class</li>
+        </ul>
+        <div>
+            <h3>Objects</h3>
+            <table>
+                <tr>
+                  <td>&#127805 Corn</td>
+                  <td>&#129362 Cucumber</td>
+                  <td>&#127813 Tomato</td>
+                  <td>&#129364 Potato</td>
+                  <td>&#127812 Mushroom</td>
+                </tr>
+            </table>
+            <canvas id="canvas" width="800" height="600" style="border: 1.5px solid hsl(150, 50%, 50%)"></canvas>
+            <br/>
+            <p id="output" style="border: 1.5px solid hsl(200, 99%, 50%); display: inline-block; width: 48rem; padding: 1rem">Voice Recognition results...</p>
+            <br/>
+            <button id="speak" type="button">Speak</button>
+        </div>
+        <br/>
+        <div class="button">
+            <a href="https://llyu0966.github.io/" class="button">Main Page</a>
+        </div>
+    </div>
+    </body>
+</html>
